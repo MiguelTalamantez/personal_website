@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Engineering – Miguel Talamantez</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Top navigation (same as index) -->
+    <nav class="nav">
+      <a href="index.html" class="nav-brand">Miguel Talamantez</a>
+      <ul class="nav-links">
+        <li><a href="engineering.html">Engineering</a></li>
+        <li><a href="creative.html">Creative</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </nav>
+
+    <!-- Engineering page content -->
+    <main>
+        <section class="projects">
+            <h1 class="projects-title">Engineering Projects</h1>
+            <p class="projects-intro">
+            A selection of engineering work. Click any project to see more details.
+            </p>
+
+            <!-- Project grid -->
+            <div class="projects-grid">
+            <button class="project-card" data-project="project1">
+                <h2 class="project-card-title">Project 1</h2>
+                <p class="project-card-tagline">Short one-line description.</p>
+            </button>
+
+            <button class="project-card" data-project="project2">
+                <h2 class="project-card-title">Project 2</h2>
+                <p class="project-card-tagline">Short one-line description.</p>
+            </button>
+
+            <button class="project-card" data-project="project3">
+                <h2 class="project-card-title">Project 3</h2>
+                <p class="project-card-tagline">Short one-line description.</p>
+            </button>
+
+            <button class="project-card" data-project="project4">
+                <h2 class="project-card-title">Project 4</h2>
+                <p class="project-card-tagline">Short one-line description.</p>
+            </button>
+            </div>
+        </section>
+
+        <!-- Simple modal (popup) -->
+        <div class="modal" id="project-modal" aria-hidden="true">
+            <div class="modal-backdrop"></div>
+            <div class="modal-dialog" role="dialog" aria-modal="true">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <h2 class="modal-title">Project title</h2>
+            <p class="modal-body">
+                Project details will go here. You can customize this content later.
+            </p>
+            </div>
+        </div>
+        </main>
+
+  </body>
+</html>
