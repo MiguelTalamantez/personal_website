@@ -235,6 +235,15 @@ main {
   color: #111827;
 }
 
+.project-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
 
 /* Stack columns on smaller screens */
 @media (max-width: 768px) {
