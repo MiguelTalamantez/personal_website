@@ -298,6 +298,57 @@ main {
   display: block;
 }
 
+/* Contact page */
+.contact {
+  max-width: 780px;
+  width: 100%;
+  margin: 3.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.contact-intro {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 2rem;
+}
+
+.contact-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.contact-subtitle {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-text {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.contact-email {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+
+
+
+
 
 /* Stack columns on smaller screens */
 @media (max-width: 768px) {
