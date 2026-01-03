@@ -15,7 +15,17 @@
         <li><a href="engineering.html">Engineering</a></li>
         <li><a href="creative.html">Creative</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="resources.html">Resources</a></li>
+        <li>
+            <a
+                href="pdf/Miguel_Resume.pdf"
+                target="_blank"
+                rel="noopener"
+            >
+                Resume
+            </a>
+        </li>
       </ul>
     </nav>
 
@@ -29,23 +39,116 @@
         </p>
 
         <div class="creative-grid">
-          <button class="creative-tile creative-art">
+        <button class="creative-tile creative-art" data-category="art">
             <span class="creative-label">Art</span>
-          </button>
+        </button>
 
-          <button class="creative-tile creative-music">
+        <button class="creative-tile creative-music" data-category="music">
             <span class="creative-label">Music</span>
-          </button>
+        </button>
 
-          <button class="creative-tile creative-crafts">
+        <button class="creative-tile creative-crafts" data-category="crafts">
             <span class="creative-label">Crafts</span>
-          </button>
+        </button>
 
-          <button class="creative-tile creative-photo">
+        <button class="creative-tile creative-photo" data-category="photography">
             <span class="creative-label">Photography</span>
-          </button>
+        </button>
         </div>
       </section>
     </main>
+    
+    <!-- Creative modal -->
+    <div class="modal" id="creative-modal" aria-hidden="true">
+      <div class="modal-backdrop"></div>
+      <div class="modal-dialog" role="dialog" aria-modal="true">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <h2 class="modal-title">Category</h2>
+        <div class="modal-body">
+          Content goes here.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Data for creative categories
+      const creativeDetails = {
+        art: {
+          title: "Art",
+          body: `
+            <p>
+              Under Construction! Please excuse the incompleteness. I'm still 
+              learning the ropes of html!! 
+            </p>
+          `
+        },
+        music: {
+          title: "Music",
+          body: `
+            <p>
+              Under Construction! Please excuse the incompleteness. I'm still 
+              learning the ropes of html!! 
+            </p>
+          `
+        },
+        crafts: {
+          title: "Crafts",
+          body: `
+            <p>
+              Under Construction! Please excuse the incompleteness. I'm still 
+              learning the ropes of html!! 
+            </p>
+          `
+        },
+        photography: {
+          title: "Photography",
+          body: `
+            <p>
+              Under Construction! Please excuse the incompleteness. I'm still 
+              learning the ropes of html!!
+            </p>
+          `
+        }
+      };
+
+      const creativeTiles = document.querySelectorAll(".creative-tile");
+      const creativeModal = document.getElementById("creative-modal");
+      const creativeModalTitle = creativeModal.querySelector(".modal-title");
+      const creativeModalBody = creativeModal.querySelector(".modal-body");
+      const creativeModalClose = creativeModal.querySelector(".modal-close");
+      const creativeModalBackdrop = creativeModal.querySelector(".modal-backdrop");
+
+      // Open modal when clicking a creative tile
+      creativeTiles.forEach((tile) => {
+        tile.addEventListener("click", () => {
+          const category = tile.getAttribute("data-category");
+          const details = creativeDetails[category];
+          if (!details) return;
+
+          creativeModalTitle.textContent = details.title;
+          creativeModalBody.innerHTML = details.body.trim();
+
+          creativeModal.classList.add("is-open");
+          creativeModal.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      function closeCreativeModal() {
+        creativeModal.classList.remove("is-open");
+        creativeModal.setAttribute("aria-hidden", "true");
+      }
+
+      creativeModalClose.addEventListener("click", closeCreativeModal);
+      creativeModalBackdrop.addEventListener("click", closeCreativeModal);
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeCreativeModal();
+        }
+      });
+        </script>
+    </body>
+    </html>
+
   </body>
 </html>

@@ -626,6 +626,93 @@ main {
   background: linear-gradient(135deg, #ec4899, #a855f7);
 }
 
+/* Services page */
+.services {
+  max-width: 980px;
+  width: 100%;
+  margin: 3.5rem auto 4rem;
+  padding: 0 1.5rem 3rem;
+}
+
+.services-title {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.services-intro {
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: #374151;
+  margin-bottom: 2.25rem;
+}
+
+/* Service cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 0.9rem;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem 1.6rem;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.06);
+}
+
+.service-card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-card-body {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* Pricing note */
+.services-note {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+/* Call to action */
+.services-cta {
+  text-align: center;
+}
+
+.services-button {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  background: #1d4ed8;
+  color: #f9fafb;
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.45);
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    background 120ms ease;
+}
+
+.services-button:hover,
+.services-button:focus-visible {
+  background: #1e40af;
+  transform: translateY(-1px);
+  box-shadow: 0 20px 45px rgba(30, 64, 175, 0.55);
+}
+
+
+
 /* Keyframes used by creative background and orbs */
 @keyframes creative-bg {
   0% {
@@ -638,9 +725,6 @@ main {
     background-position: 0% 50%;
   }
 }
-
-
-
 
 /* Stack columns on smaller screens */
 @media (max-width: 768px) {
